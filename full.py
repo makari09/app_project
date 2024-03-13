@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import plotly.express as px
 
 
 # the layout Variables
@@ -193,7 +194,16 @@ with chartRow:
     st.markdown('<div></div>', unsafe_allow_html=True)
     
     # Create a line chart for Quantity over the last month using Plotly
-
+    fig_quantity = px.line(
+        quantity_per_day, 
+        x='Order_date', 
+        y='Quantity', 
+        title='Quantity Sold over the Last Month'
+    )
+    fig_quantity.update_layout(
+        margin_r=100,
+    )
+    st.plotly_chart(fig_quantity)
 
 
 with footer:
