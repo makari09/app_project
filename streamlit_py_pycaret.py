@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/10b2YEi5zlQm91zAikxheCOgO0sqrFTrF
 """
 
-! pip install streamlit
+!pip install streamlit
 !pip install streamlit_pandas_profiling
 !pip install --pre pycaret
 !pip install ydata_profiling
